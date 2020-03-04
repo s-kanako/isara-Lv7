@@ -1,0 +1,141 @@
+
+
+.footer {
+    margin: 0 auto;
+    max-width: 100%;
+    // display: flex;
+    // justify-content: space-between;
+}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.tell,.mail {
+    width: 50%;
+    height: 140px;
+}
+.mail {
+    @include background;
+    p {
+        color: $white;
+    }
+}
+.tell-content,.mail-content {
+    display: flex;
+    margin: 35px auto;
+}
+.tell-content {
+    justify-content: flex-end;
+    padding: 0 50px;
+}
+
+.tell-img {
+    width: 70px;
+    
+    img {
+        max-width: 100%;
+        position: relative;
+        right: 24px;
+    }
+}
+.mail-content {
+    justify-content: flex-start;
+    padding: 0 74px;
+}
+.mail-img {
+    width: 70px;
+
+    img {
+        max-width: 100%;
+        position: relative;
+        right: 24px;
+    }
+}
+.footer-top-1  { 
+    font-weight: bold;
+    font-size: 16px;
+    width: 176px;
+}
+.footer-top-2  {
+    font-weight: bold;
+    font-size: 28px;
+    width: 201px;
+}
+.footer-top-3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.footer-bottom {
+    background-color: $grey;
+}
+.footer-bottom1 {
+    display: flex;
+    padding: 0 80px;
+    justify-content: space-between;
+}
+
+.footer-left {
+    width: 136px;
+    img {
+        margin-top: 25px;
+    }
+    p {
+        font-size: 16px;
+        width: 213px;
+        margin-bottom: 22px;
+    }
+}
+
+.footer-right {
+    display: flex;
+    margin-top: 50px;
+}
+.fa {
+    width: 40px;
+}
+i {
+    color: $point-color;
+}
+.fab {
+    width: 100%;
+}
+.copy {
+    font-size: 14px;
+    text-align: center;
+    padding-bottom: 9px;
+}
+
+
+@media screen and (max-width:768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .tell,.mail {
+        width: 100%;
+    }
+    .tell-content,.mail-content {
+        width: 100%;
+        justify-content: center;
+    }
+    .tell-content ,.mail-content {
+        padding: 0;
+    }
+    .footer-top-txt {
+        width: 176px;
+    }
+    .footer-top-2 {
+        font-size: 24px;
+    } 
+    .footer-bottom1 {
+        display: block;
+        padding: 0 50px;
+    }
+    .footer-right {
+        margin-top: 0;
+    }
+}

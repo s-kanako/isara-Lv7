@@ -1,0 +1,100 @@
+.interview {
+    padding: 0 100px;
+}
+.interview-inner {
+    margin: 0 auto;   
+    padding: 0 95px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1080px;
+    width: 100%;
+}
+
+.interview-card {
+    width: 280px;
+    height: 470px;
+    @include shadow;
+    
+    img {
+        height: 321px;
+    }
+}
+.type {
+    width: 120px;
+    height: 37px;
+    float: right;
+    position: relative;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    @include background;
+
+    p {
+        color: $white;
+        margin: 0 auto;
+    }
+}
+
+.interview-detail {
+    margin-left: 14px;
+
+    .when {
+        color: #868686;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 21px;
+    }
+    .name1 {
+        color: #333333;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 18px;
+    }
+    .name2 {
+        color: $point-color;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 50px;
+    }
+}
+
+.interview1 {
+    margin-top: 135px;
+}
+.interview2 {
+    margin-top: 85px;
+}
+.interview3 {
+    margin-top: 35px;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+    .interview {
+        padding: 0 50px;
+    }
+    .interview {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .interview {
+        padding: 0 15px;
+    }
+    .interview-heading img {
+        width: 25%;
+    }
+    .interview-inner {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+    .interview-card {
+        margin: 0 auto 50px auto;
+    }
+    .interview1 {
+        margin-top: 50px;
+    }
+}

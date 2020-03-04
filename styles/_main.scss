@@ -1,0 +1,242 @@
+.mv {
+    background-image: url('../../img/mv.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    margin: 0 0 0 auto;
+    width: 84%;
+
+    height: 610px;
+    // txtをセンタリングするため
+    display: flex;
+    align-items: center;
+}
+
+.mv-txt {
+    position: relative;
+    right: 100px;
+    width: 100%;
+    img {
+        width: 45%;
+    }
+    p {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
+
+.mv-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 45px;
+}
+.mv-box-half {
+    display: flex;
+}
+.mv-box {
+    width: 200px;
+    height: 90px;
+    text-align: center;
+    color: $white;
+    position: relative;
+    a {
+        @include link;
+    }
+    
+    h3 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+.mv-box-txt {
+    @include center;
+}
+.mv1 {
+    background-color: #FF9933;
+}
+.mv2 {
+    background-color: #FF8B66;
+}
+.mv3 {
+    background-color: #FF7E66;
+}
+.mv4 {
+    background-color: #FF7166;
+}
+
+
+
+// company
+
+.company {
+    margin-bottom: 120px;
+    h2 {
+        margin: 85px 0 50px 0;
+        text-align: center;
+        font-size: 2.8rem;
+        font-weight: bold;
+    }
+}
+.company-inner {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 64px;
+    width: 1080px;
+    max-width: 100%;
+    img {
+        height: 91px;
+    }
+}
+
+
+
+// point
+
+.points {
+    background-color: $grey;
+    // height: 497px;
+    padding: 0 100px;
+    margin: 0;
+}
+.point-inner {
+    padding: 90px 78px 0 78px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+.point {
+    width: 276px;
+    height: 259px;
+    background-color: $white;
+    text-align: center;
+    margin: 0 auto;
+
+    img {
+        margin: 31px 0;
+        height: 120px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+.point1 img {
+    width: 27%;
+}
+.point2 img {
+    width: 32%;
+}
+.point3 img {
+    width: 31%;
+}
+.more-button {
+    padding: 50px 0;
+}
+.more {
+    width: 155px;
+    height: 48px;
+    font-size: 16px;
+    margin: 0 auto;
+    border-radius: 24px;
+    align-items: center;
+    display: flex;
+    @include background;
+    a {
+        color: $white;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 5px auto;
+        
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .company-inner {
+        padding: 0 40px;
+        flex-wrap: wrap;
+    }
+    .company-img {
+        width: 145px;
+    }
+    .points {
+        padding: 0 15px;
+    }
+    .point-inner {
+        padding: 90px 0 0 0;
+    }
+}
+
+@media screen and (max-width:  768px) {
+    .company-inner {
+        width: 760px;
+        img {
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+    .mv {
+        width: 100%; 
+        height: 566px;
+    }
+    .mv-txt {
+        position: absolute;
+        right: 0;
+    }
+    .mv-wrapper {
+        display: block;
+        // positionの打ち消し
+        position: static;
+        margin-top: 50px;
+    }
+    .mv-box {
+        width: 190px;
+    }
+    // inner幅に作るか
+    .mv-box-half {
+        justify-content: center;
+        margin-top: 4px;
+    }
+    .mv1,.mv3 {
+        margin-right: 4px;
+    }
+    .point {
+        margin-bottom: 50px;
+    }
+    .point-inner {
+        display: block;
+    }
+    .point-button {
+        padding-top: 0;
+    }
+    
+}
+
+
+@media screen and (max-width: 425px) {
+
+    .mv {
+        background-image: url('../../img/mv-sp.jpg');
+        align-items: flex-end;
+    }
+    .mv-txt {
+        padding-bottom: 37px;
+
+        img {
+            width: 75%;
+        }
+    }
+    .company-inner {
+        padding: 0 15px;
+    }
+
+
+}

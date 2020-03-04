@@ -1,0 +1,218 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1080px;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 18px;
+
+    h1  img{
+        width: 23%;
+    }
+
+    .header-right {
+        display: flex;
+    }
+
+    a {
+        color: $base-color;
+        margin-right: 35px;
+        font-weight: bold;
+        list-style: none;
+        text-decoration: none;
+    }
+
+}
+
+.header-entry {
+    margin-right: 0;
+    color: $point-color;
+    border: 2px solid $point-color;
+    border-radius: 24px;
+    width: 121px;
+    text-align: center;
+
+    a {
+        color: $point-color;
+        margin: 0 auto;
+    }
+}
+
+.l-header {
+    display: none;
+}
+@media screen and (max-width: 767px) {
+
+    
+
+    /*ヘッダー*/
+    header {
+        display: none;
+        a {
+            margin-right: 0;
+        }
+    }
+    .l-header {
+        display: flex;
+        background: $white;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    
+    /*ドロワー*/
+    .l-drawer {
+        position: relative;
+        // inputのcheckboxは非表示
+        &__checkbox{
+        display: none;
+        }
+        // ハンバーガーアイコン
+        &__icon{
+        cursor: pointer;
+        display: block;
+        width: 56px;
+        height: 60px;
+        // ハンバーガーアイコンの中の線
+        &-parts,
+        &-parts:before,
+        &-parts:after{
+            background-color: $point-color;   
+            display: block;
+            width: 26px;
+            height: 2px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        &-parts:before,
+        &-parts:after{
+            content: " ";
+        }
+        &-parts:before{
+            top: 16px
+        }
+        &-parts:after{
+            top: -16px
+        }
+        }
+        
+        // ドロワーメニュー開いた時のメインエリアを暗く
+        &__overlay{
+        background: #000;
+        opacity: 0;
+        pointer-events: none; //ポインタの動作全部無効化
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        }
+        
+        // ドロワーメニュー
+        &__menu{
+        background: #ffffff;
+        color: #333333;
+        max-width: 100%;
+        width: 300px;
+        height: 100vh;
+        overflow-y: auto; //スクロール
+        -webkit-overflow-scrolling: touch; //スクロール（SP）
+        position: fixed;
+        top: 0;
+        right: -300px;
+        
+        }
+        // z-indexの指定（1がメインエリア）
+        &__icon{
+        z-index: 4;
+        }
+        &__menu{
+        z-index: 3;
+        }
+        &__overlay{
+        z-index: 2;
+        }
+        
+        // チェックが入ったら（アイコンクリックしたら）
+        &__checkbox:checked ~ {
+        // ハンバーガーアイコン
+        .l-drawer__icon{
+
+            .l-drawer__icon-parts{
+                background: transparent;
+                color: $point-color;
+            }
+            .l-drawer__icon-parts:before{
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+                top: 0;
+            }
+            .l-drawer__icon-parts:after{
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                top: 0;
+            }
+        }
+        // メインエリアを暗くする
+        .l-drawer__overlay {
+            opacity: 0.3;
+            pointer-events: auto; //ポインタの動作デフォルトに戻す
+        }
+        // メニューをだす
+        .l-drawer__menu {
+            right: 0;
+        }
+        }
+        // 動きをスムーズに
+        &__icon-parts,
+        &__icon-parts:after,
+        &__icon-parts:before,
+        &__overlay,
+        &__menu{
+        -webkit-transition: all .7s ;
+        transition: all .7s ;
+        }
+
+        
+    }
+    .l-drawer {
+        display: flex;
+        .items {
+            position: relative;
+            top: 30px;
+            padding-left: 140px;
+        }
+        ul {
+            list-style: none;
+            padding:  15px;
+        }
+        li {
+            margin-bottom: 35px;
+            text-align: right;
+        }
+        a {
+            text-decoration: none;
+            text-align: right;
+        }
+        .header-entry {
+            margin: 0 0 0 auto;
+            li {
+                margin-bottom: 0;
+                text-align: center;
+            }
+            a {
+            text-align: right;
+
+            }
+        }
+    }
+    
+}

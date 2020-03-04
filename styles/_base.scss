@@ -1,0 +1,67 @@
+
+
+html{
+  // 10pxに指定
+  font-size: 62.5%;
+  }
+
+  
+  
+body {
+  font-family: 'YuGothic','ヒラギノ角ゴ ProN';
+  color: $base-color;
+  margin: 0;
+  padding: 0;
+  font-size:1.6rem;/* 16px*/
+
+}
+.container {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+  cursor: pointer; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+}
+
+
+.heading  {
+  margin-top: 120px;
+  width: 1080px;
+  margin-right: auto;
+  margin-left: auto;
+  p {
+      font-size: 18px;
+      color: #555555;
+  }
+}
+
+.interview-heading img {
+  width: 39%;
+}
+.mission-heading img {
+  width: 63%;
+}
+
+
+hr {
+  border: 1px solid #B1B1B1;
+  margin: 0;
+  width: 100%;
+}
+
+
+@media screen and (max-width:767px) {
+  html {
+    //8px
+    font-size: 50%;
+  }
+}

@@ -1,0 +1,84 @@
+
+
+.mission-inner {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1080px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.mission-left {
+    width: 514px;
+    margin-top: 50px;
+    position: relative;
+    left: 100px;
+    z-index: 2;
+    @include background;
+    p {
+        color: $white;    
+    }
+}
+    .mission-ttl {
+        font-size: 24px;
+        font-family: "Hiragino Kaku Gothic ProN";
+        font-weight: bold;
+        padding: 59px 0 32px 44px;
+    }
+    .mission-txt {
+        font-size: 16px;
+        margin: 0 42px 50px 42px;
+    }
+
+.mission-right {
+    width: 100%;
+}
+.mission-right img {
+    width: 707px;
+    z-index: 1;
+    position: relative;
+    right: 100px;
+}
+
+@media screen and (max-width: 1080px) {
+    .heading {
+        padding: 0 15px;
+    }
+
+    // ランチタイムでここの微調整
+}
+
+@media screen and (max-width: 767px) {
+    .heading {
+        padding: 0 15px;
+    }
+    .mission-heading img {
+        width: 25%;
+    }
+    .mission-inner {
+        padding: 0 15px;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        position: static;
+    }
+    .mission-left {
+        bottom: 20px;
+        left: 0;        
+        width: 350px; 
+        margin-top: 0;
+        max-width: 100%;
+    }
+    .mission-ttl {
+        padding: 49px 38px 27px 26px;
+    }
+    .mission-txt {
+        margin: 0 25px 50px 25px;
+    }
+    .mission-right img {
+        position: static;
+        margin-top: 50px;
+    }
+
+}
